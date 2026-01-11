@@ -6,6 +6,13 @@ A terminal tool that visualizes how sorting algorithms work
 
 # Usage
 <br>
+Example command:
+<br>
+
+```
+java sortVisualizer.java --speed 10 -b
+#10 miliseconds per frame and bubble sort
+```
 
 `java sortVisualizer.java <option>`
 <br>
