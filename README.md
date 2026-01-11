@@ -2,4 +2,4 @@
 A terminal tool that visualizes how sorting algorithms work
 
 <br>
-<img src"./image.png" alt="display image"/>
+<img src"image.png" alt="display image"/>
