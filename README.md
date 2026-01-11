@@ -9,6 +9,8 @@ A terminal tool that visualizes how sorting algorithms work
 
 `java sortVisualizer.java <option>`
 <br>
+`--speed <int in milisec>` speed of the animation
+<br>
 `-b` bubble sort
 <br>
 `-q` quick sort
