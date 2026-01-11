@@ -6,6 +6,7 @@ A terminal tool that visualizes how sorting algorithms work
 
 # Usage
 <br>
+
 `java sortVisualizer.java <option>`
 <br>
 `-b` bubble sort
