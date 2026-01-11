@@ -34,6 +34,13 @@ public class sortVisualizer {
                 case "-m":
                     mergeSort(array, 0, array.length-1);
                     break;
+                case "-s":
+                    try {
+                        selectionSort(array);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                    break;
                 case "--speed":
                     if(args.length > 1){
                         speed = Integer.parseInt(args[1]);
@@ -42,6 +49,26 @@ public class sortVisualizer {
             }
         }
     }
+    private static void selectionSort(int[] array) throws InterruptedException {
+        int size = array.length;
+        for(int i = 0; i < size -1; i++){
+            int min_index = i;
+            for(int j = i+1; j < size; j++){
+                if(array[j] < array[min_index]){
+                    min_index = j;
+                }
+            }
+            int temp = array[i];
+            array[i] = array[min_index];
+            array[min_index] = temp;
+            System.out.print("\033[H");
+            printArray(array);
+            System.out.flush();
+            Thread.sleep(speed);
+        }
+    }
+
+    
     static void merge(int arr[], int l, int m, int r) throws InterruptedException {
         int n1 = m - l + 1;
         int n2 = r - m;
@@ -91,8 +118,7 @@ public class sortVisualizer {
             k++;
         }
     }
-    private static void mergeSort(int arr[], int l, int r){
-        
+    private static void mergeSort(int arr[], int l, int r){    
         if (l < r) {
             int m = l + (r - l) / 2;
             mergeSort(arr, l, m);
@@ -104,6 +130,8 @@ public class sortVisualizer {
             }
         }
     }
+
+
     private static void quickSort(int[] array, int left, int right){
         if(left < right){            
             int pivot = partition(array, left, right);
