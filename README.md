@@ -9,7 +9,7 @@ A terminal tool that visualizes how sorting algorithms work
 Example command:
 <br>
 
-```
+```bash
 java sortVisualizer.java --speed 10 -b
 #10 miliseconds per frame and bubble sort
 ```
